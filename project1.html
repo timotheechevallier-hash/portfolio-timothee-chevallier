@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projet 1 - Timothée CHEVALLIER</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header-make">
+    <div class="container header-content">
+      <div class="logo">Timothée <span>CHEVALLIER</span></div>
+      <nav class="nav">
+        <a href="index.html">Accueil</a>
+        <a href="about.html">À propos</a>
+        <a href="projects.html">Projets</a>
+        <a href="skills.html">Compétences</a>
+        <a href="contact.html" class="btn-nav-make">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="make-hero project-hero">
+      <div class="container make-hero-content">
+        <div style="width:100%;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;">
+          <h1 class="make-hero-title" style="font-size:3.6rem;color:#fff;margin-top:-24px;margin-bottom:12px;line-height:1.08;text-align:center;font-family:'Montserrat', Arial, sans-serif;">Projet SQL</h1>
+          <p class="make-hero-desc" style="color:#fff;font-size:1.25rem;margin-bottom:24px;text-align:center;font-family:'Montserrat', Arial, sans-serif;max-width:600px;">Identifier les joueurs qui surpassent les attentes dans les tournois de tennis.</p>
+          <div style="width:100%;max-width:900px;display:flex;justify-content:center;align-items:flex-start;gap:32px;margin-bottom:24px;flex-wrap:wrap;">
+            <div style="flex:1;min-width:320px;max-width:480px;display:flex;flex-direction:column;align-items:center;">
+              <img src="Script SQL.png" alt="Script SQL du projet" class="zoomable-img" style="width:100%;border-radius:18px;box-shadow:0 2px 16px 0 rgba(0,80,255,0.09);object-fit:contain;cursor:zoom-in;" />
+              <span style="color:#fff;font-size:1.08rem;margin-top:10px;text-align:center;font-family:'Montserrat', Arial, sans-serif;max-width:90%;display:block;">Script SQL</span>
+            </div>
+            <div style="flex:1;min-width:320px;max-width:480px;display:flex;flex-direction:column;align-items:center;">
+              <img src="Résultat SCript SQL.png" alt="Résultats SQL du projet" class="zoomable-img" style="width:100%;border-radius:18px;box-shadow:0 2px 16px 0 rgba(0,80,255,0.09);object-fit:contain;cursor:zoom-in;" />
+              <span style="color:#fff;font-size:1.08rem;margin-top:10px;text-align:center;font-family:'Montserrat', Arial, sans-serif;max-width:90%;display:block;">Résultats SQL</span>
+            </div>
+          </div>
+          <!-- Modale de zoom image -->
+          <div id="img-modal" style="display:none;position:fixed;z-index:9999;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.85);align-items:center;justify-content:center;">
+            <span id="close-modal" style="position:absolute;top:32px;right:48px;font-size:3rem;color:#fff;cursor:pointer;font-weight:bold;z-index:10001;">&times;</span>
+            <img id="modal-img" src="" alt="Zoom" style="max-width:90vw;max-height:85vh;border-radius:18px;box-shadow:0 2px 32px 0 rgba(0,80,255,0.18);background:#fff;" />
+          </div>
+          <script>
+            document.querySelectorAll('.zoomable-img').forEach(img => {
+              img.addEventListener('click', function() {
+                document.getElementById('modal-img').src = this.src;
+                document.getElementById('img-modal').style.display = 'flex';
+              });
+            });
+            document.getElementById('close-modal').onclick = function() {
+              document.getElementById('img-modal').style.display = 'none';
+              document.getElementById('modal-img').src = '';
+            };
+            document.getElementById('img-modal').onclick = function(e) {
+              if(e.target === this) {
+                this.style.display = 'none';
+                document.getElementById('modal-img').src = '';
+              }
+            };
+          </script>
+        </div>
+      </div>
+    </section>
+    <section class="project-details-block" id="details">
+      <div class="container project-details-content">
+        <div style="display:flex;flex-direction:row;align-items:flex-start;justify-content:flex-start;padding:32px 0 0 0;gap:48px;">
+          <div style="flex:1;max-width:700px;margin-left:32px;display:flex;flex-direction:column;align-items:flex-start;">
+            <h2 class="project-details-title" style="color:#0050ff;font-size:2.1rem;font-weight:800;text-align:left;margin-bottom:18px;font-family:'Montserrat', Arial, sans-serif;">Explication </h2>
+            <p style="font-size:1.18rem;color:#222;text-align:left;max-width:700px;margin-bottom:28px;font-family:'Montserrat', Arial, sans-serif;">L’objectif de ce projet est d’identifier les joueurs professionnels de tennis qui gagnent régulièrement en tant qu’outsiders, c’est-à-dire :
+              ceux qui ne sont pas favoris sur le papier (classement plus bas ou cote de pari plus élevé), mais qui remportent tout de même le match.,
+            
+            En d’autres termes, je cherche à détecter les “surprises” sportives : ces joueurs qui déjouent les prédictions, et ainsi démontrer qu’un bon data analyst peut faire parler les données pour révéler des tendances inattendues..</p>
+            <h3 style="color:#ff7a59;font-size:1.35rem;font-weight:700;margin-top:38px;margin-bottom:12px;font-family:'Montserrat', Arial, sans-serif;">Compétences techniques utilisées</h3>
+            <p style="font-size:1.08rem;color:#222;text-align:left;max-width:700px;margin-bottom:0;font-family:'Montserrat', Arial, sans-serif;">Ce projet m’a permis d’appliquer de nombreuses compétences SQL, indispensables dans le métier de data analyst :</p>
+            <ul style="margin:18px 0 0 0;padding:0;background:#fff;border-radius:16px;box-shadow:0 4px 24px 0 rgba(0,80,255,0.08);max-width:700px;overflow:hidden;">
+              <li style="display:flex;align-items:flex-start;gap:14px;padding:18px 24px;border-bottom:1px solid #f0f2f7;transition:background 0.18s;">
+                <span style="display:inline-block;width:14px;height:14px;background:#0050ff;border-radius:50%;margin-top:4px;"></span>
+                <div><span style="font-weight:700;color:#0050ff;font-size:1.08rem;">CASE</span> <span style="color:#222;font-size:1.08rem;opacity:0.88;">Déterminer si le gagnant était outsider (cote ou classement inférieur)</span></div>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:14px;padding:18px 24px;border-bottom:1px solid #f0f2f7;transition:background 0.18s;">
+                <span style="display:inline-block;width:14px;height:14px;background:#0050ff;border-radius:50%;margin-top:4px;"></span>
+                <div><span style="font-weight:700;color:#0050ff;font-size:1.08rem;">WHERE</span> <span style="color:#222;font-size:1.08rem;opacity:0.88;">Nettoyer les données (odds valides, joueurs non nuls)</span></div>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:14px;padding:18px 24px;border-bottom:1px solid #f0f2f7;transition:background 0.18s;">
+                <span style="display:inline-block;width:14px;height:14px;background:#0050ff;border-radius:50%;margin-top:4px;"></span>
+                <div><span style="font-weight:700;color:#0050ff;font-size:1.08rem;">GROUP BY</span> <span style="color:#222;font-size:1.08rem;opacity:0.88;">Compter les victoires et les participations par joueur</span></div>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:14px;padding:18px 24px;border-bottom:1px solid #f0f2f7;transition:background 0.18s;">
+                <span style="display:inline-block;width:14px;height:14px;background:#0050ff;border-radius:50%;margin-top:4px;"></span>
+                <div><span style="font-weight:700;color:#0050ff;font-size:1.08rem;">COUNT()</span> <span style="color:#222;font-size:1.08rem;opacity:0.88;">Calculs d’occurrence (nombre de matchs / victoires)</span></div>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:14px;padding:18px 24px;border-bottom:1px solid #f0f2f7;transition:background 0.18s;">
+                <span style="display:inline-block;width:14px;height:14px;background:#0050ff;border-radius:50%;margin-top:4px;"></span>
+                <div><span style="font-weight:700;color:#0050ff;font-size:1.08rem;">UNION ALL</span> <span style="color:#222;font-size:1.08rem;opacity:0.88;">Fusionner les colonnes Player_1 et Player_2 pour l’analyse globale</span></div>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:14px;padding:18px 24px;border-bottom:1px solid #f0f2f7;transition:background 0.18s;">
+                <span style="display:inline-block;width:14px;height:14px;background:#0050ff;border-radius:50%;margin-top:4px;"></span>
+                <div><span style="font-weight:700;color:#0050ff;font-size:1.08rem;">JOIN</span> <span style="color:#222;font-size:1.08rem;opacity:0.88;">Croiser les victoires surprises et les totaux de matchs</span></div>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:14px;padding:18px 24px;border-bottom:1px solid #f0f2f7;transition:background 0.18s;">
+                <span style="display:inline-block;width:14px;height:14px;background:#0050ff;border-radius:50%;margin-top:4px;"></span>
+                <div><span style="font-weight:700;color:#0050ff;font-size:1.08rem;">ROUND()</span> <span style="color:#222;font-size:1.08rem;opacity:0.88;">Affichage clair du % de victoire surprise</span></div>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:14px;padding:18px 24px;border-bottom:1px solid #f0f2f7;transition:background 0.18s;">
+                <span style="display:inline-block;width:14px;height:14px;background:#0050ff;border-radius:50%;margin-top:4px;"></span>
+                <div><span style="font-weight:700;color:#0050ff;font-size:1.08rem;">ORDER BY / LIMIT</span> <span style="color:#222;font-size:1.08rem;opacity:0.88;">Trier et afficher les meilleurs profils</span></div>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:14px;padding:18px 24px;border-bottom:1px solid #f0f2f7;transition:background 0.18s;">
+                <span style="display:inline-block;width:14px;height:14px;background:#0050ff;border-radius:50%;margin-top:4px;"></span>
+                <div><span style="font-weight:700;color:#0050ff;font-size:1.08rem;">RANK()</span> <span style="color:#222;font-size:1.08rem;opacity:0.88;">Classer les joueurs selon leur performance “surprise”</span></div>
+              </li>
+              
+            </ul>
+            <script>
+              document.querySelectorAll('.project-details-content ul li').forEach(li => {
+                li.addEventListener('mouseenter', function() {
+                  this.style.background = '#f5f7fa';
+                });
+                li.addEventListener('mouseleave', function() {
+                  this.style.background = 'transparent';
+                });
+              });
+            </script>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html> 

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projet 5 - Timothée CHEVALLIER</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header-make">
+    <div class="container header-content">
+      <div class="logo">Timothée <span>CHEVALLIER</span></div>
+      <nav class="nav">
+        <a href="index.html">Accueil</a>
+        <a href="about.html">À propos</a>
+        <a href="projects.html">Projets</a>
+        <a href="skills.html">Compétences</a>
+        <a href="contact.html" class="btn-nav-make">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="make-hero project-hero">
+      <div class="container make-hero-content">
+        <div style="width:100%;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;">
+          <h1 class="make-hero-title" style="font-size:3.6rem;color:#fff;margin-top:-24px;margin-bottom:12px;line-height:1.08;text-align:center;font-family:'Montserrat', Arial, sans-serif;">Projet 5</h1>
+          <p class="make-hero-desc" style="color:#fff;font-size:1.25rem;margin-bottom:18px;text-align:center;font-family:'Montserrat', Arial, sans-serif;max-width:600px;">Description du projet 5. Personnalise cette page avec les détails, images, et liens de ton projet.</p>
+          <div style="width:100%;display:flex;flex-direction:row;align-items:flex-start;gap:32px;margin-bottom:18px;justify-content:center;">
+            <img src="codeSQL chun.png" alt="Code SQL churn" style="width:540px;max-width:100%;border-radius:14px;box-shadow:0 2px 12px 0 rgba(0,80,255,0.07);object-fit:contain;" />
+            <img src="banque- Taux de churn par pays et tranche d'âge.png" alt="Taux de churn par pays et tranche d'âge" style="width:420px;max-width:100%;border-radius:14px;box-shadow:0 2px 12px 0 rgba(0,80,255,0.07);object-fit:contain;" />
+          </div>
+          <div style="width:100%;max-width:600px;display:flex;justify-content:center;margin-bottom:24px;">
+            <!-- Intègre ta vidéo ici -->
+            <div style="position:relative;width:100%;padding-bottom:56.25%;height:0;">
+              <!-- Exemple : <iframe src='https://www.youtube.com/embed/...' style='position:absolute;top:0;left:0;width:100%;height:100%;border-radius:18px;border:none;' allowfullscreen></iframe> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="project-details-block" id="details">
+      <div class="container project-details-content">
+        <div style="display:flex;flex-direction:row;align-items:flex-start;justify-content:flex-start;padding:32px 0 0 0;gap:48px;">
+          <div style="flex:1;max-width:700px;margin-left:32px;display:flex;flex-direction:column;align-items:flex-start;">
+            <h2 class="project-details-title" style="color:#0050ff;font-size:2.1rem;font-weight:800;text-align:left;margin-bottom:18px;font-family:'Montserrat', Arial, sans-serif;">Explication de la vidéo</h2>
+            <p style="font-size:1.18rem;color:#222;text-align:left;max-width:700px;margin-bottom:28px;font-family:'Montserrat', Arial, sans-serif;">
+              <b>1. Contexte et objectif</b><br>
+              L'entreprise dispose d'une base clients contenant des informations socio-démographiques, comportementales et financières. Une variable Exited indique si un client a quitté la banque (churn) ou non. L'objectif de ce projet était d'identifier les segments de clientèle présentant les taux de churn les plus élevés, afin de prioriser les actions de rétention. L'analyse a été réalisée exclusivement en SQL, en croisant deux dimensions clés : le pays et la tranche d'âge des clients.<br><br>
+              <b>2. Collecte et préparation des données</b><br>
+              Les données proviennent du fichier Churn_Modelling.csv, importé dans un environnement SQL. Une variable catégorielle age_group a été créée pour regrouper les clients en quatre tranches : "Moins de 30 ans", "30-39 ans", "40-49 ans" et "50 ans et plus". Les données ont été filtrées pour ne conserver que les segments comptant au moins 20 clients, afin d'éviter les biais liés aux échantillons trop faibles. Un indicateur clé, le taux de churn, a été calculé pour chaque segment comme le rapport entre le nombre de clients perdus et le nombre total de clients.<br><br>
+              <b>3. Analyses SQL</b><br>
+              Plusieurs requêtes SQL ont été exécutées pour répondre à la problématique. La première a calculé le taux de churn global, servant de référence. Une agrégation par pays et tranche d'âge a permis d'identifier les segments les plus à risque. Le nombre total de clients et le nombre de churners ont été calculés pour chaque groupe, puis classés du plus fort au plus faible taux de churn. En complément, l'âge moyen par segment a été calculé afin de mieux caractériser les profils concernés.<br><br>
+              <b>4. Visualisations</b><br>
+              Les résultats ont été représentés dans un graphique à barres horizontales classé par taux de churn décroissant, avec un code couleur par pays. Chaque barre correspond à un segment "Pays | Tranche d'âge" et un axe secondaire affiche l'âge moyen des clients de ce segment. Ce double affichage permet de repérer visuellement les zones géographiques et les groupes d'âge les plus exposés, tout en disposant d'une donnée démographique clé pour orienter les actions marketing.<br><br>
+              <b>5. Résultats et recommandations</b><br>
+              L'analyse met en évidence que certains segments cumulent un taux de churn élevé et un âge moyen relativement élevé, signe d'une potentielle inadéquation de l'offre avec les attentes de cette tranche d'âge. Certains pays présentent également un risque plus marqué, quel que soit l'âge. Sur cette base, il est recommandé de concentrer les efforts de rétention sur les segments en haut du classement, d'adapter les offres pour mieux répondre aux besoins des clients matures, et de lancer des campagnes ciblées dans les zones géographiques à fort taux de churn. Un suivi régulier, via les mêmes requêtes SQL, permettrait de mesurer l'impact des actions mises en place et d'ajuster les priorités en conséquence.
+            </p>
+            <h3 style="color:#ff7a59;font-size:1.35rem;font-weight:700;margin-top:38px;margin-bottom:12px;font-family:'Montserrat', Arial, sans-serif;">Difficultés rencontrées</h3>
+            <p style="font-size:1.08rem;color:#222;text-align:left;max-width:700px;margin-bottom:0;font-family:'Montserrat', Arial, sans-serif;">Décris ici les principaux obstacles ou défis rencontrés lors de la réalisation du projet, comment tu les as surmontés, et ce que tu en as appris. Cela peut inclure des aspects techniques, organisationnels ou humains.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html> 

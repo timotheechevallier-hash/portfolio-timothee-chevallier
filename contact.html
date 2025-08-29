@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Timothée CHEVALLIER</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header-make">
+    <div class="container header-content">
+      <div class="logo">Timothée <span>CHEVALLIER</span></div>
+      <nav class="nav">
+        <a href="index.html">Accueil</a>
+        <a href="about.html">À propos</a>
+        <a href="projects.html">Projets</a>
+        <a href="skills.html">Compétences</a>
+        <a href="contact.html" class="btn-nav-make">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="make-hero">
+      <div class="container make-hero-content">
+        <div class="make-hero-left">
+          <h1 class="make-hero-title" style="font-size:3.6rem;color:#fff;margin-top:-32px;margin-bottom:18px;line-height:1.08;text-align:left;">Contact</h1>
+          <p class="make-hero-desc" style="color:#fff;font-size:1.25rem;margin-bottom:28px;text-align:left;">N’hésite pas à me contacter pour toute question, collaboration ou opportunité professionnelle.</p>
+          <form class="contact-form" action="#" method="post">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="prenom">Prénom</label>
+                <input type="text" id="prenom" name="prenom" required>
+              </div>
+              <div class="form-group">
+                <label for="nom">Nom</label>
+                <input type="text" id="nom" name="nom" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="sujet">Sujet</label>
+              <input type="text" id="sujet" name="sujet" placeholder="Sujet de votre message" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="make-btn-main">Envoyer</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html> 

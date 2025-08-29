@@ -1,0 +1,38 @@
+# Fichiers système macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Fichiers d'éditeur
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Fichiers temporaires
+*.tmp
+*.temp
+*.log
+
+# Fichiers de build
+dist/
+build/
+node_modules/
+
+# Fichiers d'environnement
+.env
+.env.local
+.env.production
+
+# Fichiers de cache
+.cache/
+.sass-cache/
+
+# Fichiers de sauvegarde
+*.bak
+*.backup
