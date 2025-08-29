@@ -24,35 +24,43 @@
   </header>
   <main>
     <section class="make-hero">
+      <div class="make-hero-bg">
+        <svg class="make-hero-shape make-hero-shape1" width="520" height="520" viewBox="0 0 520 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="260" cy="260" r="260" fill="#fff" fill-opacity="0.08"/>
+        </svg>
+        <svg class="make-hero-shape make-hero-shape2" width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="90" cy="90" r="90" fill="#ff7a59" fill-opacity="0.13"/>
+        </svg>
+      </div>
       <div class="container make-hero-content">
         <div class="make-hero-left">
           <h1 class="make-hero-title" style="font-size:3.6rem;color:#fff;margin-top:-32px;margin-bottom:18px;line-height:1.08;text-align:left;">Contact</h1>
-          <p class="make-hero-desc" style="color:#fff;font-size:1.25rem;margin-bottom:28px;text-align:left;">N’hésite pas à me contacter pour toute question, collaboration ou opportunité professionnelle.</p>
-          <form class="contact-form" action="#" method="post">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="prenom">Prénom</label>
-                <input type="text" id="prenom" name="prenom" required>
+          <p class="make-hero-desc" style="color:#fff;font-size:1.25rem;margin-bottom:28px;text-align:left;">N'hésitez pas à me contacter pour toute question, collaboration ou opportunité professionnelle.</p>
+          
+          <div class="contact-options">
+            <div class="contact-card">
+              <div class="contact-icon">📧</div>
+              <h3>Email direct</h3>
+              <p>Cliquez sur le bouton ci-dessous pour m'envoyer un email directement depuis votre application de messagerie.</p>
+              <a href="mailto:timotheechevallier@gmail.com?subject=Contact%20Portfolio%20Timothée%20CHEVALLIER&body=Bonjour%20Timothée,%0D%0A%0D%0AJe%20souhaite%20vous%20contacter%20concernant%20[précisez%20votre%20demande].%0D%0A%0D%0ACordialement,%0D%0A[Votre%20nom]" class="make-btn-main">📧 M'envoyer un email</a>
+            </div>
+            
+            <div class="contact-card">
+              <div class="contact-icon">💼</div>
+              <h3>Informations de contact</h3>
+              <div class="contact-info">
+                <p><strong>Email :</strong> timotheechevallier@gmail.com</p>
+                <p><strong>Localisation :</strong> France</p>
+                <p><strong>Disponibilité :</strong> En recherche d'opportunités</p>
               </div>
-              <div class="form-group">
-                <label for="nom">Nom</label>
-                <input type="text" id="nom" name="nom" required>
-              </div>
             </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-              <label for="sujet">Sujet</label>
-              <input type="text" id="sujet" name="sujet" placeholder="Sujet de votre message" required>
-            </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="5" required></textarea>
-            </div>
-            <button type="submit" class="make-btn-main">Envoyer</button>
-          </form>
+          </div>
+          
+          <div class="contact-note">
+            <p style="color:#fff;font-size:1rem;margin-top:40px;text-align:center;opacity:0.8;">
+              💡 <strong>Astuce :</strong> Le bouton "M'envoyer un email" ouvrira automatiquement votre application de messagerie par défaut avec un email pré-rempli.
+            </p>
+          </div>
         </div>
       </div>
     </section>
